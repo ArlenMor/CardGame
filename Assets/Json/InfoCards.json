@@ -1,0 +1,13 @@
+
+{
+	"AllCards" : [
+		{
+			"BGName" : "BG_green",
+			"EdgingName" : "Edging_wood",
+			"ImageName" : "pixelcardassest_v02_36",
+			"BgName" : "pixelcardassest_v02_65",
+			"CardName" : "Первая карта",
+			"InfoCard" : "Вы ничего не теряете, но и не приобретаете"
+		}
+	]
+}
