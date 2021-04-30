@@ -14,10 +14,15 @@ namespace Card
         public GameObject prefCard;
         private GameObject instCard;
 
-        public void DrawCard(CardInfoForInst card)
+        //добавить проверку на корректность переданной карты
+        public void DrawCard(Card card)
         {
+            //создаю объект
             instCard = Instantiate(prefCard, new Vector3(0, 0, 0), Quaternion.identity, transform);
+            //меняю ему имя на то, что соответствует карте
             instCard.gameObject.name = card.Name;
+            
+            //вписываю туда все параметры, которые пришли из card 
             instCard.transform.Find("Name").gameObject.transform
                     .GetChild(0).gameObject
                     .GetComponent<TextMeshProUGUI>().text = card.Name;

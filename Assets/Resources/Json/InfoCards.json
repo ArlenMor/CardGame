@@ -1,0 +1,86 @@
+
+{
+	"AllCards" : [
+		{
+			"BGName" : "BG_green",
+			"EdgingName" : "Edging_wood",
+			"ImageName" : "BlueBook",
+			"BgName" : "BgName_wood_3",
+			"CardName" : "Первая карта",
+			"InfoCard" : "Колода 0",
+			"NumberOfDeck" : "0"
+		},
+		{
+			"BGName" : "BG_grey",
+			"EdgingName" : "Edging_stone",
+			"ImageName" : "GrerenScroll",
+			"BgName" : "BgName_stone_0",
+			"CardName" : "Вторая карта",
+			"InfoCard" : "Колода 0",
+			"NumberOfDeck" : "0"
+		},
+		{
+			"BGName" : "BG_red",
+			"EdgingName" : "Edging_gold",
+			"ImageName" : "GreenShield",
+			"BgName" : "BgName_gold_1",
+			"CardName" : "Третья карта",
+			"InfoCard" : "Колода 1",
+			"NumberOfDeck" : "1"
+		},
+		{
+			"BGName" : "BG_yellow",
+			"EdgingName" : "Edging_stone",
+			"ImageName" : "CompositeBow",
+			"BgName" : "BgName_gold_3",
+			"CardName" : "Четвертая карта",
+			"InfoCard" : "Колода 1",
+			"NumberOfDeck" : "1"
+		},
+		{
+			"BGName" : "BG_BlackStone",
+			"EdgingName" : "Edging_wood",
+			"ImageName" : "MetalAxe",
+			"BgName" : "BgName_wood_1",
+			"CardName" : "Пятая карта",
+			"InfoCard" : "Колода 2",
+			"NumberOfDeck" : "2"
+		},
+		{
+			"BGName" : "BG_BlueStone",
+			"EdgingName" : "Edging_gold",
+			"ImageName" : "MagicWand_1",
+			"BgName" : "BgName_gold_1",
+			"CardName" : "Шестая карта",
+			"InfoCard" : "Колода 2",
+			"NumberOfDeck" : "2"
+		},
+		{
+			"BGName" : "BG_green",
+			"EdgingName" : "Edging_wood",
+			"ImageName" : "RedBook",
+			"BgName" : "BgName_wood_1",
+			"CardName" : "Cедьмая карта",
+			"InfoCard" : "Колода 2",
+			"NumberOfDeck" : "2"
+		},
+		{
+			"BGName" : "BG_green",
+			"EdgingName" : "Edging_wood",
+			"ImageName" : "GreenBook",
+			"BgName" : "BgName_wood_1",
+			"CardName" : "Восьмая карта",
+			"InfoCard" : "Колода 2",
+			"NumberOfDeck" : "2"
+		},
+		{
+			"BGName" : "BG_green",
+			"EdgingName" : "Edging_wood",
+			"ImageName" : "YellowBook",
+			"BgName" : "BgName_wood_1",
+			"CardName" : "Девятая карта",
+			"InfoCard" : "Колода 2",
+			"NumberOfDeck" : "2"
+		}
+	]
+}

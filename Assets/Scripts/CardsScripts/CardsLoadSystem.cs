@@ -10,7 +10,8 @@ using TMPro;
 namespace Card
 {
     [System.Serializable]
-    public struct Card
+    //структура одной карты. —одержит в себе данные из json
+    public struct CardInfo
     {
         public string BGName;      
         public string EdgingName;
@@ -18,23 +19,27 @@ namespace Card
         public string BgName;
         public string CardName;
         public string InfoCard;
+        public int NumberOfDeck;
     }
 
+    //все карты из json
     public struct Cards
     {
-        public List<Card> AllCards;
+        public List<CardInfo> AllCards;
     }
 
-    public struct CardInfoForInst
+    //структура непосредственно с нужными спрайтами дл€ карты 
+    public struct Card
     {
         public Sprite Bg;           //задний фон
         public Sprite Edging;       //ќкантовка
         public Sprite Image;        // артинка сверху
-        public Sprite BgName;         //фон под именем
+        public Sprite BgName;       //фон под именем
         public string Name;
         public string Info;
+        public int NumberOfDeck;   
 
-        public CardInfoForInst(Sprite _Bg, Sprite _Edging, Sprite _Image, Sprite _BgName, string _Name, string _Info)
+        public Card(Sprite _Bg, Sprite _Edging, Sprite _Image, Sprite _BgName, string _Name, string _Info, int _NumberOfDeck)
         {
             Bg = _Bg;
             Edging = _Edging;
@@ -42,49 +47,48 @@ namespace Card
             BgName = _BgName;
             Name = _Name;
             Info = _Info;
+            NumberOfDeck = _NumberOfDeck;
         }
     }
 
+    //«агрузка карт из json файла и спрайтов из spritesheeld'a 
     public class CardsLoadSystem
     {
-        private List<Card> cards = new List<Card>();
+        //все карты
+        private List<CardInfo> cardsInfo = new List<CardInfo>();
+        //все спрайты
         private Sprite[] sprites;
-        private List<CardInfoForInst> cardsForInst = new List<CardInfoForInst>();
+        //все карты со спрайтами
+        private List<Card> cards = new List<Card>();
 
-        /*public GameObject prefCard;
-        private GameObject instCard;*/
-
-        /*[SerializeField]
-        private string loadPath;*/
-
-        private void LoadJson(string Path)
+        //«агрузка из json файла
+        private void LoadJson(string jsonName)
         {
-            if (!File.Exists(Path))
+            TextAsset file = Resources.Load("Json/" + jsonName) as TextAsset;
+            if (file.name != "InfoCards")
             {
                 Debug.Log("{GameLog} => [CardsLoadSystem] - Load() => File not Found");
                 return;
             }
 
-            string json = File.ReadAllText(Path);
+            string json = file.text;
+            //string json = Path.Combine(Application.persistentDataPath + "/Json/" + jsonName); /*File.ReadAllText(Path);*/
             Cards infoCard = JsonUtility.FromJson<Cards>(json);
-            cards = infoCard.AllCards;
-
-
-            Debug.Log("{GameLog} => [CardsLoadSystem] - Load() => Success");
+            cardsInfo = infoCard.AllCards;
         }
 
         private void LoadSprite(Texture2D SpriteSheet)
         {
             sprites = Resources.LoadAll<Sprite>("CardSprites/" + SpriteSheet.name);
         }
-        public List<Card> GetCard()
+        public List<CardInfo> GetCardInfo()
         {
-            return cards;
+            return cardsInfo;
         }
 
-        public List<CardInfoForInst> GetCardInfoForInsts()
+        public List<Card> GetCards()
         {
-            return cardsForInst;
+            return cards;
         }
         public Sprite[] GetSprites()
         {
@@ -95,12 +99,12 @@ namespace Card
         {
             LoadJson(PathToJson);
             LoadSprite(spriteSheet);
-            CreateCardsForInst();
+            CreateCards();
         }
 
-        private void CreateCardsForInst()
+        private void CreateCards()
         {
-            foreach(Card card in cards)
+            foreach(CardInfo card in cardsInfo)
             {
                 //fix it!!!
                 Sprite Bg = null;
@@ -108,36 +112,31 @@ namespace Card
                 Sprite Image = null;
                 Sprite BgName = null;
                 string Name;
-                string Info;                
-                /*instCard = Instantiate(prefCard, new Vector3(0, 0, 0), Quaternion.identity, transform);
-                instCard.transform.Find("Name").gameObject.transform
-                    .GetChild(0).gameObject
-                    .GetComponent<TextMeshProUGUI>().text = card.CardName;
-
-                instCard.transform.Find("Info").gameObject
-                                  .GetComponent<TextMeshProUGUI>().text = card.InfoCard;*/
+                string Info;
+                int Deck;
 
                 Info = card.InfoCard;
                 Name = card.CardName;
+                Deck = card.NumberOfDeck;
 
                 //проверить нет ли пустых полей, если есть, то выкинуть ex
                 foreach (Sprite sprite in sprites)
                 {
                     if (sprite.name == card.BGName)
                         Bg = sprite;
-                    //instCard.gameObject.GetComponent<Image>().sprite = sprite;
+                    
                     if (sprite.name == card.EdgingName)
                         Edging = sprite;
-                    //instCard.transform.Find("Edging").gameObject.GetComponent<Image>().sprite = sprite;
+                    
                     if (sprite.name == card.ImageName)
                         Image = sprite;
-                    //instCard.transform.Find("Image").gameObject.GetComponent<Image>().sprite = sprite;
+                    
                     if (sprite.name == card.BgName)
                         BgName = sprite;
-                    //instCard.transform.Find("Name").gameObject.GetComponent<Image>().sprite = sprite;
+                    
                 }
 
-                cardsForInst.Add(new CardInfoForInst(Bg, Edging, Image, BgName, Name, Info));
+                cards.Add(new Card(Bg, Edging, Image, BgName, Name, Info, Deck));
             }
             
         }

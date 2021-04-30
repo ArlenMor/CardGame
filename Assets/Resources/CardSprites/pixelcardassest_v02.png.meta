@@ -31,175 +31,175 @@ TextureImporter:
     second: Text_gold
   - first:
       213: -8979370937684336635
-    second: pixelcardassest_v02_9
+    second: Health
   - first:
       213: 6866734352767498809
-    second: pixelcardassest_v02_10
+    second: BlueBook
   - first:
       213: -9153104140339986575
-    second: pixelcardassest_v02_11
+    second: YellowBook
   - first:
       213: -7207422260035817013
-    second: pixelcardassest_v02_12
+    second: PurpleShield
   - first:
       213: 4475794314800339103
-    second: pixelcardassest_v02_13
+    second: SilverPoint
   - first:
       213: -844044559987779437
-    second: pixelcardassest_v02_14
+    second: GoldPoint
   - first:
       213: 3277902156063200243
-    second: pixelcardassest_v02_15
+    second: CopperPoint
   - first:
       213: -6742336959745652692
-    second: pixelcardassest_v02_16
+    second: RedPotion
   - first:
       213: -3925622578837923358
-    second: pixelcardassest_v02_17
+    second: BluePotion
   - first:
       213: 5770547564096482573
-    second: pixelcardassest_v02_18
+    second: GreenPotion
   - first:
       213: -6974554971378939119
-    second: pixelcardassest_v02_19
+    second: YellowPotion
   - first:
       213: 2894845374204814923
-    second: pixelcardassest_v02_20
+    second: PurplePotion
   - first:
       213: 6980310002675674619
     second: BG_BlueStone
   - first:
       213: -7687680330249400803
-    second: pixelcardassest_v02_22
+    second: RedTestTube
   - first:
       213: 5306084116002754432
-    second: pixelcardassest_v02_23
+    second: BlueTestTube
   - first:
       213: -5279591193872272780
-    second: pixelcardassest_v02_24
+    second: GreenTestTube
   - first:
       213: 8326198396503520654
-    second: pixelcardassest_v02_25
+    second: YellowTestTube
   - first:
       213: 8475496761922594701
-    second: pixelcardassest_v02_26
+    second: PurpleTestTube
   - first:
       213: -4497700047957268783
-    second: pixelcardassest_v02_27
+    second: YellowShield
   - first:
       213: 6213694597441752166
-    second: pixelcardassest_v02_28
+    second: SilverCircle
   - first:
       213: 3144030273803141811
-    second: pixelcardassest_v02_29
+    second: GoldCircle
   - first:
       213: 2076785118316816046
-    second: pixelcardassest_v02_30
+    second: CopperCircle
   - first:
       213: -3341218557997128460
-    second: pixelcardassest_v02_31
+    second: Rubin
   - first:
       213: -8113165533218510331
-    second: pixelcardassest_v02_32
+    second: BlueStone
   - first:
       213: -9125590737273949146
-    second: pixelcardassest_v02_33
+    second: Emerald
   - first:
       213: 2131316239201643143
-    second: pixelcardassest_v02_34
+    second: GoldStone
   - first:
       213: -1830531057248370718
-    second: pixelcardassest_v02_35
+    second: PurpleStone
   - first:
       213: 6466724346864854010
-    second: pixelcardassest_v02_36
+    second: RedBook
   - first:
       213: 2113808355405395588
-    second: pixelcardassest_v02_37
+    second: GreenBook
   - first:
       213: 799986807160894102
-    second: pixelcardassest_v02_38
+    second: PurpleBook
   - first:
       213: -6349684168011775635
-    second: pixelcardassest_v02_39
+    second: GreenShield
   - first:
       213: -1776901696021843225
-    second: pixelcardassest_v02_40
+    second: BgName_wood_0
   - first:
       213: -1389038367067389851
-    second: pixelcardassest_v02_41
+    second: BgName_stone_0
   - first:
       213: -7334134179041973298
-    second: pixelcardassest_v02_42
+    second: BgName_gold_0
   - first:
       213: 7576828898866657560
-    second: pixelcardassest_v02_43
+    second: SilverSqr
   - first:
       213: -9147865409053037900
-    second: pixelcardassest_v02_44
+    second: GoldSqr
   - first:
       213: -4975338925921256000
-    second: pixelcardassest_v02_45
+    second: CopperSqr
   - first:
       213: -4056606427345875053
-    second: pixelcardassest_v02_46
+    second: RedScroll
   - first:
       213: 2922225104016374770
-    second: pixelcardassest_v02_47
+    second: GrerenScroll
   - first:
       213: 13036515643263710
-    second: pixelcardassest_v02_48
+    second: PurpleScroll
   - first:
       213: -7860296851334774242
-    second: pixelcardassest_v02_49
+    second: BlueShield
   - first:
       213: -2190739727372439289
-    second: pixelcardassest_v02_50
+    second: silverStar
   - first:
       213: 5811092605587631763
-    second: pixelcardassest_v02_51
+    second: GoldStar
   - first:
       213: -242671137191440953
-    second: pixelcardassest_v02_52
+    second: CopperStar
   - first:
       213: 1548974071560813253
-    second: pixelcardassest_v02_53
+    second: BlueScroll
   - first:
       213: 1281105664355146958
-    second: pixelcardassest_v02_54
+    second: YellowScroll
   - first:
       213: -9216592643076362225
-    second: pixelcardassest_v02_55
+    second: BgName_wood_1
   - first:
       213: 1066977226680776679
-    second: pixelcardassest_v02_56
+    second: BgName_stone_1
   - first:
       213: -4164717537097098001
-    second: pixelcardassest_v02_57
+    second: BgName_gold_1
   - first:
       213: 4901274615592979697
-    second: pixelcardassest_v02_58
+    second: BgName_gold_3
   - first:
       213: -2783472481076665512
-    second: pixelcardassest_v02_59
+    second: Stick_0
   - first:
       213: 971821793645809426
-    second: pixelcardassest_v02_60
+    second: Stick_1
   - first:
       213: 346647204481992382
-    second: pixelcardassest_v02_61
+    second: Stick_2
   - first:
       213: -8032969734435907053
-    second: pixelcardassest_v02_62
+    second: CopperSword
   - first:
       213: -7097340680562821030
-    second: pixelcardassest_v02_63
+    second: MetalSword
   - first:
       213: -4845043432409016882
-    second: pixelcardassest_v02_64
+    second: RedShield
   - first:
       213: -7769959242808098867
-    second: pixelcardassest_v02_65
+    second: BgName_wood_3
   - first:
       213: -5135468889879729379
     second: pixelcardassest_v02_66
@@ -211,28 +211,28 @@ TextureImporter:
     second: pixelcardassest_v02_68
   - first:
       213: 5363062086576780634
-    second: pixelcardassest_v02_69
+    second: StoneAxe
   - first:
       213: 832113264918201339
-    second: pixelcardassest_v02_70
+    second: MetalAxe
   - first:
       213: 5355884329578407115
-    second: pixelcardassest_v02_71
+    second: MagicWand_0
   - first:
       213: -181777882360856442
-    second: pixelcardassest_v02_72
+    second: MagicWand_1
   - first:
       213: 120185567516541557
-    second: pixelcardassest_v02_74
+    second: Bow
   - first:
       213: -2972213906939925310
-    second: pixelcardassest_v02_75
+    second: CompositeBow
   - first:
       213: 2536103247557804355
-    second: pixelcardassest_v02_76
+    second: WoodShield
   - first:
       213: 3258055453701112521
-    second: pixelcardassest_v02_77
+    second: MetalShield
   - first:
       213: 1437166819015269724
     second: Edging_wood
@@ -247,10 +247,10 @@ TextureImporter:
     second: BG_metal
   - first:
       213: 6531081079765925087
-    second: pixelcardassest_v02_82
+    second: Bg_white
   - first:
       213: -6907008565238893121
-    second: pixelcardassest_v02_83
+    second: Bg_empty
   - first:
       213: 8999707567314153279
     second: pixelcardassest_v02_84
@@ -544,7 +544,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_9
+      name: Health
       rect:
         serializedVersion: 2
         x: 429
@@ -565,7 +565,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_10
+      name: BlueBook
       rect:
         serializedVersion: 2
         x: 479
@@ -586,7 +586,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_11
+      name: YellowBook
       rect:
         serializedVersion: 2
         x: 512
@@ -607,7 +607,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_12
+      name: PurpleShield
       rect:
         serializedVersion: 2
         x: 568
@@ -628,7 +628,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_13
+      name: SilverPoint
       rect:
         serializedVersion: 2
         x: 383
@@ -649,7 +649,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_14
+      name: GoldPoint
       rect:
         serializedVersion: 2
         x: 407
@@ -670,7 +670,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_15
+      name: CopperPoint
       rect:
         serializedVersion: 2
         x: 432
@@ -691,7 +691,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_16
+      name: RedPotion
       rect:
         serializedVersion: 2
         x: 466
@@ -712,7 +712,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_17
+      name: BluePotion
       rect:
         serializedVersion: 2
         x: 482
@@ -733,7 +733,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_18
+      name: GreenPotion
       rect:
         serializedVersion: 2
         x: 498
@@ -754,7 +754,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_19
+      name: YellowPotion
       rect:
         serializedVersion: 2
         x: 514
@@ -775,7 +775,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_20
+      name: PurplePotion
       rect:
         serializedVersion: 2
         x: 528
@@ -817,7 +817,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_22
+      name: RedTestTube
       rect:
         serializedVersion: 2
         x: 467
@@ -838,7 +838,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_23
+      name: BlueTestTube
       rect:
         serializedVersion: 2
         x: 483
@@ -859,7 +859,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_24
+      name: GreenTestTube
       rect:
         serializedVersion: 2
         x: 499
@@ -880,7 +880,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_25
+      name: YellowTestTube
       rect:
         serializedVersion: 2
         x: 515
@@ -901,7 +901,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_26
+      name: PurpleTestTube
       rect:
         serializedVersion: 2
         x: 530
@@ -922,7 +922,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_27
+      name: YellowShield
       rect:
         serializedVersion: 2
         x: 568
@@ -943,7 +943,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_28
+      name: SilverCircle
       rect:
         serializedVersion: 2
         x: 377
@@ -964,7 +964,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_29
+      name: GoldCircle
       rect:
         serializedVersion: 2
         x: 401
@@ -985,7 +985,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_30
+      name: CopperCircle
       rect:
         serializedVersion: 2
         x: 425
@@ -1006,7 +1006,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_31
+      name: Rubin
       rect:
         serializedVersion: 2
         x: 467
@@ -1027,7 +1027,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_32
+      name: BlueStone
       rect:
         serializedVersion: 2
         x: 483
@@ -1048,7 +1048,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_33
+      name: Emerald
       rect:
         serializedVersion: 2
         x: 500
@@ -1069,7 +1069,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_34
+      name: GoldStone
       rect:
         serializedVersion: 2
         x: 515
@@ -1090,7 +1090,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_35
+      name: PurpleStone
       rect:
         serializedVersion: 2
         x: 532
@@ -1111,7 +1111,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_36
+      name: RedBook
       rect:
         serializedVersion: 2
         x: 463
@@ -1132,7 +1132,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_37
+      name: GreenBook
       rect:
         serializedVersion: 2
         x: 496
@@ -1153,7 +1153,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_38
+      name: PurpleBook
       rect:
         serializedVersion: 2
         x: 529
@@ -1174,7 +1174,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_39
+      name: GreenShield
       rect:
         serializedVersion: 2
         x: 568
@@ -1195,7 +1195,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_40
+      name: BgName_wood_0
       rect:
         serializedVersion: 2
         x: 16
@@ -1216,7 +1216,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_41
+      name: BgName_stone_0
       rect:
         serializedVersion: 2
         x: 135
@@ -1237,7 +1237,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_42
+      name: BgName_gold_0
       rect:
         serializedVersion: 2
         x: 252
@@ -1258,7 +1258,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_43
+      name: SilverSqr
       rect:
         serializedVersion: 2
         x: 376
@@ -1279,7 +1279,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_44
+      name: GoldSqr
       rect:
         serializedVersion: 2
         x: 399
@@ -1300,7 +1300,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_45
+      name: CopperSqr
       rect:
         serializedVersion: 2
         x: 424
@@ -1321,7 +1321,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_46
+      name: RedScroll
       rect:
         serializedVersion: 2
         x: 459
@@ -1342,7 +1342,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_47
+      name: GrerenScroll
       rect:
         serializedVersion: 2
         x: 493
@@ -1363,7 +1363,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_48
+      name: PurpleScroll
       rect:
         serializedVersion: 2
         x: 527
@@ -1384,7 +1384,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_49
+      name: BlueShield
       rect:
         serializedVersion: 2
         x: 568
@@ -1405,7 +1405,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_50
+      name: silverStar
       rect:
         serializedVersion: 2
         x: 377
@@ -1426,7 +1426,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_51
+      name: GoldStar
       rect:
         serializedVersion: 2
         x: 402
@@ -1447,7 +1447,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_52
+      name: CopperStar
       rect:
         serializedVersion: 2
         x: 427
@@ -1468,7 +1468,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_53
+      name: BlueScroll
       rect:
         serializedVersion: 2
         x: 476
@@ -1489,7 +1489,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_54
+      name: YellowScroll
       rect:
         serializedVersion: 2
         x: 509
@@ -1510,7 +1510,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_55
+      name: BgName_wood_1
       rect:
         serializedVersion: 2
         x: 16
@@ -1531,7 +1531,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_56
+      name: BgName_stone_1
       rect:
         serializedVersion: 2
         x: 135
@@ -1552,10 +1552,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_57
+      name: BgName_gold_1
       rect:
         serializedVersion: 2
-        x: 252
+        x: 251
         y: 322
         width: 96
         height: 18
@@ -1573,7 +1573,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_58
+      name: BgName_gold_3
       rect:
         serializedVersion: 2
         x: 361
@@ -1594,7 +1594,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_59
+      name: Stick_0
       rect:
         serializedVersion: 2
         x: 476
@@ -1615,7 +1615,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_60
+      name: Stick_1
       rect:
         serializedVersion: 2
         x: 491
@@ -1636,7 +1636,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_61
+      name: Stick_2
       rect:
         serializedVersion: 2
         x: 506
@@ -1657,7 +1657,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_62
+      name: CopperSword
       rect:
         serializedVersion: 2
         x: 523
@@ -1678,7 +1678,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_63
+      name: MetalSword
       rect:
         serializedVersion: 2
         x: 544
@@ -1699,7 +1699,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_64
+      name: RedShield
       rect:
         serializedVersion: 2
         x: 568
@@ -1720,7 +1720,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_65
+      name: BgName_wood_3
       rect:
         serializedVersion: 2
         x: 17
@@ -1804,7 +1804,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_69
+      name: StoneAxe
       rect:
         serializedVersion: 2
         x: 438
@@ -1825,7 +1825,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_70
+      name: MetalAxe
       rect:
         serializedVersion: 2
         x: 469
@@ -1846,7 +1846,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_71
+      name: MagicWand_0
       rect:
         serializedVersion: 2
         x: 509
@@ -1867,7 +1867,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_72
+      name: MagicWand_1
       rect:
         serializedVersion: 2
         x: 536
@@ -1888,7 +1888,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_74
+      name: Bow
       rect:
         serializedVersion: 2
         x: 571
@@ -1909,7 +1909,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_75
+      name: CompositeBow
       rect:
         serializedVersion: 2
         x: 604
@@ -1930,7 +1930,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_76
+      name: WoodShield
       rect:
         serializedVersion: 2
         x: 638
@@ -1951,7 +1951,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_77
+      name: MetalShield
       rect:
         serializedVersion: 2
         x: 667
@@ -2018,7 +2018,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 226
-        y: 148
+        y: 147
         width: 100
         height: 128
       alignment: 0
@@ -2056,7 +2056,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_82
+      name: Bg_white
       rect:
         serializedVersion: 2
         x: 14
@@ -2077,7 +2077,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelcardassest_v02_83
+      name: Bg_empty
       rect:
         serializedVersion: 2
         x: 115

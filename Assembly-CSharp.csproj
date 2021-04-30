@@ -56,9 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CardsScripts\CardMovement.cs" />
+    <Compile Include="Assets\Scripts\CoreLogic\CoreGame.cs" />
     <Compile Include="Assets\Scripts\CardsScripts\CardsLoadSystem.cs" />
+    <Compile Include="Assets\Scripts\CoreLogic\GameSettings.cs" />
     <Compile Include="Assets\Scripts\CardsScripts\CardsManager.cs" />
     <Compile Include="Assets\Scripts\CardsScripts\CardView.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\ButtonStart.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
