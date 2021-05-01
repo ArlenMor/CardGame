@@ -21,7 +21,8 @@ namespace Card
             instCard = Instantiate(prefCard, new Vector3(0, 0, 0), Quaternion.identity, transform);
             //меняю ему имя на то, что соответствует карте
             instCard.gameObject.name = card.Name;
-            
+            instCard.gameObject.transform.SetSiblingIndex(1);
+
             //вписываю туда все параметры, которые пришли из card 
             instCard.transform.Find("Name").gameObject.transform
                     .GetChild(0).gameObject

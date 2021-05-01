@@ -196,6 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d804cd90ce281fd41b9747dc798699ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationCoef: -5
+  speedCardAfterTouch: 4.5
 --- !u!50 &4394572490419257030
 Rigidbody2D:
   serializedVersion: 4
