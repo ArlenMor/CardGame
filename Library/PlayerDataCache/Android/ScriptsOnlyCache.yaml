@@ -6,6 +6,8 @@ ScriptsOnlyBuild:
     - Card.CardView
     - Card.CardsManager
     - Core.CoreGame
+    - GameUI.UIManager
+    - GameUI.UIView
     - SceneTransition.SceneTransition
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -82,29 +84,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1782}
     - Class: 114
-      Script: {instanceID: 2468}
+      Script: {instanceID: 1884}
     - Class: 114
-      Script: {instanceID: 2524}
+      Script: {instanceID: 2470}
     - Class: 114
-      Script: {instanceID: 2616}
+      Script: {instanceID: 2526}
     - Class: 114
-      Script: {instanceID: 2658}
+      Script: {instanceID: 2618}
     - Class: 114
-      Script: {instanceID: 2698}
+      Script: {instanceID: 2660}
     - Class: 114
-      Script: {instanceID: 2788}
+      Script: {instanceID: 2700}
     - Class: 114
-      Script: {instanceID: 2960}
+      Script: {instanceID: 2790}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 3102}
+      Script: {instanceID: 3002}
     - Class: 114
-      Script: {instanceID: 4206}
+      Script: {instanceID: 3104}
     - Class: 114
-      Script: {instanceID: 4994}
+      Script: {instanceID: 4208}
     - Class: 114
-      Script: {instanceID: 24390}
+      Script: {instanceID: 4996}
+    - Class: 114
+      Script: {instanceID: 31606}
+    - Class: 114
+      Script: {instanceID: 31614}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -149,27 +155,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1782}
     - Class: 114
-      Script: {instanceID: 2090}
+      Script: {instanceID: 1884}
     - Class: 114
-      Script: {instanceID: 2468}
+      Script: {instanceID: 2092}
     - Class: 114
-      Script: {instanceID: 2524}
+      Script: {instanceID: 2470}
     - Class: 114
-      Script: {instanceID: 2616}
+      Script: {instanceID: 2526}
     - Class: 114
-      Script: {instanceID: 2658}
+      Script: {instanceID: 2618}
     - Class: 114
-      Script: {instanceID: 2788}
+      Script: {instanceID: 2660}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 2790}
     - Class: 114
-      Script: {instanceID: 3102}
+      Script: {instanceID: 3002}
     - Class: 114
-      Script: {instanceID: 4242}
+      Script: {instanceID: 3104}
     - Class: 114
-      Script: {instanceID: 4570}
+      Script: {instanceID: 4244}
     - Class: 114
-      Script: {instanceID: 24390}
+      Script: {instanceID: 4572}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -273,6 +279,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: b1c12a0ead63b4a7872fa283730d66e6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SceneTransition
+    className: SceneTransition
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -369,7 +381,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 050a2dc498f0538daa197fa4d4181f13
+      Hash: 14ddc23eb6026408e902c8a152295211
     assemblyName: Assembly-CSharp.dll
     namespaceName: Card
     className: CardMovement
@@ -417,7 +429,7 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: 0b14a4ab3db8d5fe381e408b7dcfe16d
+      Hash: 737cc2d79eea5dc42dd5841c72c58e7d
     assemblyName: Assembly-CSharp.dll
     namespaceName: Core
     className: CoreGame
@@ -717,7 +729,7 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: e607d6429091a68015bca5b5007c7b93
+      Hash: 030c7935efb0bc086955b39b4da23125
     assemblyName: Assembly-CSharp.dll
     namespaceName: Card
     className: CardView
@@ -735,12 +747,18 @@ ScriptsOnlyBuild:
     className: FabrikSolver2D
   - hash:
       serializedVersion: 2
-      Hash: b1c12a0ead63b4a7872fa283730d66e6
+      Hash: 4a4a5043612bee8d48b5c3a937dab157
     assemblyName: Assembly-CSharp.dll
-    namespaceName: SceneTransition
-    className: SceneTransition
+    namespaceName: GameUI
+    className: UIManager
+  - hash:
+      serializedVersion: 2
+      Hash: 458c813283cfd032255524bad62132d7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GameUI
+    className: UIView
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Game.unity
-  playerPath: F:/develop/Card/Build/CardsV0.5.apk
+  playerPath: F:/develop/Card/Build/CardsV1.0.apk

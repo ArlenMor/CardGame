@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 namespace SceneTransition
 {
+
+    //Класс, который отвечает за переключение сцен
     public class SceneTransition : MonoBehaviour
     {
         public TextMeshProUGUI loadingProgress;

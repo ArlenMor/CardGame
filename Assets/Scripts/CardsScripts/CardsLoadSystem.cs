@@ -6,6 +6,8 @@ using System.IO;
 using UnityEngine.UI;
 using TMPro;
 
+using Core;
+
 
 namespace Card
 {
@@ -20,6 +22,10 @@ namespace Card
         public string CardName;
         public string InfoCard;
         public int NumberOfDeck;
+        public float HealthPlus;
+        public float ManaPlus;
+        public float HealthMinus;
+        public float ManaMinus;
     }
 
     //все карты из json
@@ -35,11 +41,25 @@ namespace Card
         public Sprite Edging;       //Окантовка
         public Sprite Image;        //Картинка сверху
         public Sprite BgName;       //фон под именем
-        public string Name;
-        public string Info;
-        public int NumberOfDeck;   
+        public string Name;         //Название карты
+        public string Info;         //Информация о том, что делает карты
+        public int NumberOfDeck;    //Номер колоды (сортируются по силе)
+        public float HealthPlus;          //изменение здоровья при свайпе вправо
+        public float ManaPlus;            //изменение маны при свайпе вправо
+        public float HealthMinus;
+        public float ManaMinus;
 
-        public Card(Sprite _Bg, Sprite _Edging, Sprite _Image, Sprite _BgName, string _Name, string _Info, int _NumberOfDeck)
+        public Card(Sprite _Bg,
+                    Sprite _Edging,
+                    Sprite _Image,
+                    Sprite _BgName,
+                    string _Name,
+                    string _Info,
+                    int _NumberOfDeck,
+                    float _Heaelth,
+                    float _ManaPlus,
+                    float _HealthMinus,
+                    float _ManaMinus)
         {
             Bg = _Bg;
             Edging = _Edging;
@@ -48,6 +68,10 @@ namespace Card
             Name = _Name;
             Info = _Info;
             NumberOfDeck = _NumberOfDeck;
+            HealthPlus = _Heaelth;
+            ManaPlus = _ManaPlus;
+            HealthMinus = _HealthMinus;
+            ManaMinus = _ManaMinus;
         }
     }
 
@@ -100,6 +124,7 @@ namespace Card
             LoadJson(PathToJson);
             LoadSprite(spriteSheet);
             CreateCards();
+            GameSettings.numberCards = cardsInfo.Count;
         }
 
         private void CreateCards()
@@ -114,10 +139,18 @@ namespace Card
                 string Name;
                 string Info;
                 int Deck;
+                float HealthPlus;
+                float ManaPlus;
+                float HealthMinus;
+                float ManaMinus;
 
                 Info = card.InfoCard;
                 Name = card.CardName;
                 Deck = card.NumberOfDeck;
+                HealthPlus = card.HealthPlus;
+                ManaPlus = card.ManaPlus;
+                HealthMinus = card.HealthMinus;
+                ManaMinus = card.ManaMinus;
 
                 //проверить нет ли пустых полей, если есть, то выкинуть ex
                 foreach (Sprite sprite in sprites)
@@ -136,7 +169,7 @@ namespace Card
                     
                 }
 
-                cards.Add(new Card(Bg, Edging, Image, BgName, Name, Info, Deck));
+                cards.Add(new Card(Bg, Edging, Image, BgName, Name, Info, Deck, HealthPlus, ManaPlus, HealthMinus, ManaMinus));
             }
             
         }

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - DestroyCard
+  - DestroyCardLeft
+  - DestroyCardRight
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,15 @@ namespace Card
         [SerializeField]
         private float rotationCoef;
         [SerializeField]
-        private float speedCardAfterTouch;
+        private float speedComebackCam;
+
+
+        //в какую сторону свайпнули карты
+        private bool goLeftCard = false;
+        private bool goRightCard = false;
+
+        //переменная обозначающая отпустили карту или нет
+        private bool dropCard = false;
 
         Vector3 offset;
         private void Awake()
@@ -25,7 +33,33 @@ namespace Card
         private void Update()
         {
             transform.eulerAngles = new Vector3(0, 0, transform.position.x * rotationCoef);
+            //если карту отпустили раньше времени, нужно вернуть её на изначальное место
+            if(dropCard)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, 0, 0), Time.deltaTime * speedComebackCam);
+            }
+            //Если карта ушла влево или вправо, позволим ей уйти полностью с экрана перед уничтожением
+            if(goRightCard)
+            {
+                transform.Translate(Vector3.right * speedComebackCam * 1.2f * Time.deltaTime);
+                Invoke("DestroyObject", 0.5f);
+            }
+            if(goLeftCard)
+            {
+                transform.Translate(Vector3.left * speedComebackCam * 1.2f * Time.deltaTime);
+                Invoke("DestroyObject", 0.5f);
+            }
+
+            
         }
+
+        private void DestroyObject()
+        {
+            Destroy(transform.gameObject);
+            goLeftCard = goRightCard = false;
+        }
+
+        //Когда перетаскиваем карту
         public void OnDrag(PointerEventData eventData)
         {
             Vector3 newPos = cam.ScreenToWorldPoint(eventData.position);
@@ -34,29 +68,36 @@ namespace Card
             transform.position = newPos + offset;
         }
 
+        //Когда подняли карту
         public void OnBeginDrag(PointerEventData eventData)
         {
             offset = transform.position - cam.ScreenToWorldPoint(eventData.position);
             offset.y = transform.position.y;
+            dropCard = false;
         }
 
+        //Когда положили карту
         public void OnEndDrag(PointerEventData eventData)
         {
-            if (eventData.delta.x > 0)
-                transform.GetComponent<Rigidbody2D>().AddForce(Vector2.right * speedCardAfterTouch, ForceMode2D.Impulse);
-            if (eventData.delta.x < 0)
-                transform.GetComponent<Rigidbody2D>().AddForce(Vector2.left * speedCardAfterTouch, ForceMode2D.Impulse);
+            dropCard = true;
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if(collision.transform.gameObject.tag == "DestroyCard")
+            //Соприкосновение с Destroycardleft and right
+            if(collision.transform.gameObject.tag == "DestroyCardRight")
             {
-                Destroy(transform.gameObject);
                 GameSettings.canSpawnCard = true;
+                GameSettings.swipeRight = true;
+                goRightCard = true;
+            }
+            if (collision.transform.gameObject.tag == "DestroyCardLeft")
+            {
+                GameSettings.canSpawnCard = true;
+                GameSettings.swipeLeft = true;
+                goLeftCard = true;
             }
         }
 
-        
     }
 }

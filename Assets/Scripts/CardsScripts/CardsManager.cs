@@ -16,41 +16,43 @@ namespace Card
     
     public class CardsManager : MonoBehaviour
     {
-
-        private string jsonName = "InfoCards";
-
-        private int[] numberCardInDeck = new int[3];
-
-        private int index = 0;
-        private static int numberOfDecks = 3;
+        //Drag and Drop
         public CardView cardView;
-
         public Texture2D spriteSheet;
 
-        private CardsLoadSystem loadSystem = new CardsLoadSystem();
 
+        //Всё, что связаннос с картами
         private List<CardInfo> cardsInfo;
         private Sprite[] sprites;
         private List<Card> cards;
-        
-
         private List<Card>[] Decks = new List<Card>[numberOfDecks];
         private List<Card> generalDeck = new List<Card>();
+        private static int numberOfDecks = 3;
+        private int[] numberCardInDeck = new int[3];
+
+        //Всё, что связанно с загрузкой карт
+        private CardsLoadSystem loadSystem = new CardsLoadSystem();
+        private string jsonName = "InfoCards";
+
+
+
+
+        
         private void Awake()
         {
             for (int i = 0; i < numberOfDecks; i++)
             {
                 Decks[i] = new List<Card>();
             }
+            //Загрузка всего что нужно
             loadSystem.Load(jsonName, spriteSheet);
             cardsInfo = loadSystem.GetCardInfo();
             sprites = loadSystem.GetSprites();
             cards = loadSystem.GetCards();
+            //Создание колоды
             CreateDeck();
             ShuffleDeck();
             CreateGeneralDeck();
-
-            
         }
 
         private void CreateDeck()
@@ -95,30 +97,38 @@ namespace Card
                 }
             }
         }
-        public void SpawnCard()
+        public void SpawnCard(int index)
         {
             GameSettings.canSpawnCard = false;
             if(index < generalDeck.Count - 1)
             {
                 cardView.DrawCard(generalDeck[index]);
-                index++;
             }
             else
             {
                 Debug.Log("{GameLog} => [CardsManager] - SpawnCard() => Deck is empty");
             }
         }
-        public void Print()
+
+        public Card GetCard(int index)
         {
-            foreach(Card card in cards)
-            {
-                Debug.Log("Bg.name = " + card.Bg.name);
+            return generalDeck[index];
+        }
+        public void Print(Card card)
+        {
+            /*foreach(Card card in cards)
+            {*/
+                /*Debug.Log("Bg.name = " + card.Bg.name);
                 Debug.Log("Edging.name = " + card.Edging.name);
                 Debug.Log("Image.name = " + card.Image.name);
                 Debug.Log("BgName.name = " + card.BgName.name);
                 Debug.Log("Cards name = " + card.Name);
-                Debug.Log("Card info = " + card.Info);
-            }
+                Debug.Log("Card info = " + card.Info);*/
+                Debug.Log("HP = " + card.HealthPlus);
+                Debug.Log("HM = " + card.HealthMinus);
+                Debug.Log("MP = " + card.ManaPlus);
+                Debug.Log("MM = " + card.ManaMinus);
+            //}
         }
     }
 }

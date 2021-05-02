@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 using SceneTransition;
 
+// ласс, который отвечает за прив€зку кнопок, которые мен€ют сцены и открывают меню
 public class ButtonStart : MonoBehaviour
 {
 

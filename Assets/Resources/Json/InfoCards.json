@@ -2,85 +2,121 @@
 {
 	"AllCards" : [
 		{
-			"BGName" : "BG_green",
+			"BGName" : "BG_grey",
 			"EdgingName" : "Edging_wood",
-			"ImageName" : "BlueBook",
-			"BgName" : "BgName_wood_3",
-			"CardName" : "Первая карта",
-			"InfoCard" : "Колода 0",
-			"NumberOfDeck" : "0"
+			"ImageName" : "StoneAxe",
+			"BgName" : "BgName_wood_0",
+			"CardName" : "Топорик из камня",
+			"InfoCard" : "Колода 0\nВзять: -5 энергии",
+			"NumberOfDeck" : "0",
+			"HealthPlus" : "0",
+			"ManaPlus" : "-0.05",
+			"HealthMinus" : "0",
+			"ManaMinus" : "0"
 		},
 		{
 			"BGName" : "BG_grey",
-			"EdgingName" : "Edging_stone",
-			"ImageName" : "GrerenScroll",
-			"BgName" : "BgName_stone_0",
-			"CardName" : "Вторая карта",
-			"InfoCard" : "Колода 0",
-			"NumberOfDeck" : "0"
+			"EdgingName" : "Edging_wood",
+			"ImageName" : "GreenShield",
+			"BgName" : "BgName_wood_0",
+			"CardName" : "Поднять щиты!",
+			"InfoCard" : "Колода 0\nВзять: -3 энергии",
+			"NumberOfDeck" : "0",
+			"HealthPlus" : "0",
+			"ManaPlus" : "-0.03",
+			"HealthMinus" : "0",
+			"ManaMinus" : "0"
 		},
 		{
-			"BGName" : "BG_red",
-			"EdgingName" : "Edging_gold",
-			"ImageName" : "GreenShield",
-			"BgName" : "BgName_gold_1",
-			"CardName" : "Третья карта",
-			"InfoCard" : "Колода 1",
-			"NumberOfDeck" : "1"
+			"BGName" : "BG_green",
+			"EdgingName" : "Edging_stone",
+			"ImageName" : "BluePotion",
+			"BgName" : "BgName_stone_0",
+			"CardName" : "Немного воды..",
+			"InfoCard" : "Колода 1\nВзять: +3 энергии",
+			"NumberOfDeck" : "1",
+			"HealthPlus" : "0",
+			"ManaPlus" : "+0.03",
+			"HealthMinus" : "0",
+			"ManaMinus" : "0"
 		},
 		{
 			"BGName" : "BG_yellow",
 			"EdgingName" : "Edging_stone",
-			"ImageName" : "CompositeBow",
-			"BgName" : "BgName_gold_3",
-			"CardName" : "Четвертая карта",
-			"InfoCard" : "Колода 1",
-			"NumberOfDeck" : "1"
-		},
-		{
-			"BGName" : "BG_BlackStone",
-			"EdgingName" : "Edging_wood",
-			"ImageName" : "MetalAxe",
-			"BgName" : "BgName_wood_1",
-			"CardName" : "Пятая карта",
-			"InfoCard" : "Колода 2",
-			"NumberOfDeck" : "2"
-		},
-		{
-			"BGName" : "BG_BlueStone",
-			"EdgingName" : "Edging_gold",
-			"ImageName" : "MagicWand_1",
-			"BgName" : "BgName_gold_1",
-			"CardName" : "Шестая карта",
-			"InfoCard" : "Колода 2",
-			"NumberOfDeck" : "2"
+			"ImageName" : "RedScroll",
+			"BgName" : "BgName_wood_3",
+			"CardName" : "Странный свиток..",
+			"InfoCard" : "Колода 1\nЗапрещенная литература..\nЧитать на свой страх и риск",
+			"NumberOfDeck" : "1",
+			"HealthPlus" : "-0.2",
+			"ManaPlus" : "0",
+			"HealthMinus" : "0",
+			"ManaMinus" : "0"
 		},
 		{
 			"BGName" : "BG_green",
 			"EdgingName" : "Edging_wood",
-			"ImageName" : "RedBook",
+			"ImageName" : "Bow",
 			"BgName" : "BgName_wood_1",
-			"CardName" : "Cедьмая карта",
-			"InfoCard" : "Колода 2",
-			"NumberOfDeck" : "2"
+			"CardName" : "Охота",
+			"InfoCard" : "Колода 1\nПоохотиться на местых оленей",
+			"NumberOfDeck" : "1",
+			"HealthPlus" : "0.2",
+			"ManaPlus" : "0.1",
+			"HealthMinus" : "0",
+			"ManaMinus" : "0"
 		},
 		{
-			"BGName" : "BG_green",
-			"EdgingName" : "Edging_wood",
+			"BGName" : "BG_blue",
+			"EdgingName" : "Edging_stone",
 			"ImageName" : "GreenBook",
-			"BgName" : "BgName_wood_1",
-			"CardName" : "Восьмая карта",
-			"InfoCard" : "Колода 2",
-			"NumberOfDeck" : "2"
+			"BgName" : "BgName_stone_1",
+			"CardName" : "Набраться сил",
+			"InfoCard" : "Колода 1\nПочитать про храбрых воинов Кальрадии",
+			"NumberOfDeck" : "1",
+			"HealthPlus" : "0",
+			"ManaPlus" : "0.05",
+			"HealthMinus" : "0",
+			"ManaMinus" : "0"
 		},
 		{
-			"BGName" : "BG_green",
+			"BGName" : "BG_red",
 			"EdgingName" : "Edging_wood",
-			"ImageName" : "YellowBook",
+			"ImageName" : "MagicWand_1",
 			"BgName" : "BgName_wood_1",
-			"CardName" : "Девятая карта",
-			"InfoCard" : "Колода 2",
-			"NumberOfDeck" : "2"
+			"CardName" : "Толи ножка от стула, толи волшебная палочка",
+			"InfoCard" : "Колода 2\nВзмахнуть?",
+			"NumberOfDeck" : "2",
+			"HealthPlus" : "-0.1",
+			"ManaPlus" : "-0.3",
+			"HealthMinus" : "0",
+			"ManaMinus" : "0"
+		},
+		{
+			"BGName" : "BG_yellow",
+			"EdgingName" : "Edging_gold",
+			"ImageName" : "GoldPoint",
+			"BgName" : "BgName_gold_3",
+			"CardName" : "Бесполезное золото",
+			"InfoCard" : "Колода 2\nТы богат!!!\n\n\nНо всем всё равно...",
+			"NumberOfDeck" : "2",
+			"HealthPlus" : "0",
+			"ManaPlus" : "0",
+			"HealthMinus" : "0",
+			"ManaMinus" : "0"
+		},
+		{
+			"BGName" : "BG_grey",
+			"EdgingName" : "Edging_stone",
+			"ImageName" : "Emerald",
+			"BgName" : "BgName_stone_0",
+			"CardName" : "Что это там блестит..?",
+			"InfoCard" : "Колода 2\nКакой-то сомородок...\nАвось дорогой?",
+			"NumberOfDeck" : "2",
+			"HealthPlus" : "-0.92",
+			"ManaPlus" : "0",
+			"HealthMinus" : "0",
+			"ManaMinus" : "0"
 		}
 	]
 }
