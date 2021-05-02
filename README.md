@@ -25,5 +25,4 @@
 
 Версия 1.0!
 
-![2021-05-02_22_12_57](https://user-images.githubusercontent.com/42170867/116818243-93e99380-ab94-11eb-9c74-bf605a431d2e.gif)
-
+![2021-05-02_22_25_12](https://user-images.githubusercontent.com/42170867/116818488-ce076500-ab95-11eb-9ca0-58cf82161707.gif)
