@@ -100,9 +100,10 @@ namespace Card
         public void SpawnCard(int index)
         {
             GameSettings.canSpawnCard = false;
-            if(index < generalDeck.Count - 1)
+            if(index < generalDeck.Count)
             {
                 cardView.DrawCard(generalDeck[index]);
+                
             }
             else
             {
@@ -118,16 +119,24 @@ namespace Card
         {
             /*foreach(Card card in cards)
             {*/
-                /*Debug.Log("Bg.name = " + card.Bg.name);
-                Debug.Log("Edging.name = " + card.Edging.name);
-                Debug.Log("Image.name = " + card.Image.name);
-                Debug.Log("BgName.name = " + card.BgName.name);
-                Debug.Log("Cards name = " + card.Name);
-                Debug.Log("Card info = " + card.Info);*/
-                Debug.Log("HP = " + card.HealthPlus);
-                Debug.Log("HM = " + card.HealthMinus);
-                Debug.Log("MP = " + card.ManaPlus);
-                Debug.Log("MM = " + card.ManaMinus);
+            Debug.Log("Bg.name = " + card.Bg.name);
+            Debug.Log("Edging.name = " + card.Edging.name);
+            Debug.Log("Image.name = " + card.Image.name);
+            Debug.Log("BgName.name = " + card.BgName.name);
+            Debug.Log("Cards name = " + card.Name);
+            Debug.Log("Card info = " + card.Info);
+            Debug.Log("Card Chance = " + card.Chance);
+            Debug.Log("Card Can safe = " + card.CanSafe);
+            Debug.Log("Change Stats:");
+            foreach(var stat in card.ChangeStats)
+            {
+                Debug.Log(stat);
+            }
+            Debug.Log("Card NeedToTake:");
+            foreach(var cardName in card.NeedToTake)
+            {
+                Debug.Log(cardName);
+            }
             //}
         }
     }

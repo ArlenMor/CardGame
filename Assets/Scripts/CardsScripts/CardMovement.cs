@@ -87,12 +87,14 @@ namespace Card
             //Соприкосновение с Destroycardleft and right
             if(collision.transform.gameObject.tag == "DestroyCardRight")
             {
+                transform.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 GameSettings.canSpawnCard = true;
                 GameSettings.swipeRight = true;
                 goRightCard = true;
             }
             if (collision.transform.gameObject.tag == "DestroyCardLeft")
             {
+                transform.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 GameSettings.canSpawnCard = true;
                 GameSettings.swipeLeft = true;
                 goLeftCard = true;

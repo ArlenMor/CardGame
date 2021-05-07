@@ -22,10 +22,11 @@ namespace Card
         public string CardName;
         public string InfoCard;
         public int NumberOfDeck;
-        public float HealthPlus;
-        public float ManaPlus;
-        public float HealthMinus;
-        public float ManaMinus;
+        public List<float> ChangeStats; //4 параметра. Два первых - свайп вправо, два последних - свайп влево
+        public List<string> NeedToTake; //Необходимые карты, для того чтобы свайпнуть вправа эту
+        public int Chance;            //Шанс успеха
+        public bool CanSafe;            //Можно ли положить эту карту в инвентарь
+        
     }
 
     //все карты из json
@@ -44,10 +45,10 @@ namespace Card
         public string Name;         //Название карты
         public string Info;         //Информация о том, что делает карты
         public int NumberOfDeck;    //Номер колоды (сортируются по силе)
-        public float HealthPlus;          //изменение здоровья при свайпе вправо
-        public float ManaPlus;            //изменение маны при свайпе вправо
-        public float HealthMinus;
-        public float ManaMinus;
+        public List<float> ChangeStats;
+        public List<string> NeedToTake;
+        public int Chance;
+        public bool CanSafe;
 
         public Card(Sprite _Bg,
                     Sprite _Edging,
@@ -56,10 +57,10 @@ namespace Card
                     string _Name,
                     string _Info,
                     int _NumberOfDeck,
-                    float _Heaelth,
-                    float _ManaPlus,
-                    float _HealthMinus,
-                    float _ManaMinus)
+                    List<float> _ChangeStats,
+                    List<string> _NeedToTake,
+                    int _Chance,
+                    bool _CanSafe)
         {
             Bg = _Bg;
             Edging = _Edging;
@@ -68,10 +69,15 @@ namespace Card
             Name = _Name;
             Info = _Info;
             NumberOfDeck = _NumberOfDeck;
-            HealthPlus = _Heaelth;
-            ManaPlus = _ManaPlus;
-            HealthMinus = _HealthMinus;
-            ManaMinus = _ManaMinus;
+            ChangeStats = new List<float>();
+            NeedToTake = new List<string>();
+            foreach (var stat in _ChangeStats)
+                ChangeStats.Add(stat);
+            foreach (var nameCard in _NeedToTake)
+                NeedToTake.Add(nameCard);
+
+            Chance = _Chance;
+            CanSafe = _CanSafe;
         }
     }
 
@@ -131,28 +137,11 @@ namespace Card
         {
             foreach(CardInfo card in cardsInfo)
             {
-                //fix it!!!
                 Sprite Bg = null;
                 Sprite Edging = null;
                 Sprite Image = null;
                 Sprite BgName = null;
-                string Name;
-                string Info;
-                int Deck;
-                float HealthPlus;
-                float ManaPlus;
-                float HealthMinus;
-                float ManaMinus;
 
-                Info = card.InfoCard;
-                Name = card.CardName;
-                Deck = card.NumberOfDeck;
-                HealthPlus = card.HealthPlus;
-                ManaPlus = card.ManaPlus;
-                HealthMinus = card.HealthMinus;
-                ManaMinus = card.ManaMinus;
-
-                //проверить нет ли пустых полей, если есть, то выкинуть ex
                 foreach (Sprite sprite in sprites)
                 {
                     if (sprite.name == card.BGName)
@@ -169,7 +158,7 @@ namespace Card
                     
                 }
 
-                cards.Add(new Card(Bg, Edging, Image, BgName, Name, Info, Deck, HealthPlus, ManaPlus, HealthMinus, ManaMinus));
+                cards.Add(new Card(Bg, Edging, Image, BgName, card.CardName, card.InfoCard, card.NumberOfDeck, card.ChangeStats, card.NeedToTake, card.Chance, card.CanSafe));
             }
             
         }

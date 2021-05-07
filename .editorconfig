@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0649: Полю "CardMovement.rotationCoef" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0.
+dotnet_diagnostic.CS0649.severity = none

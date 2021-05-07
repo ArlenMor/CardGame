@@ -39,8 +39,14 @@ namespace Core
         {
             if (GameSettings.swipeRight)
             {
-                GameSettings.health = GameSettings.health + currentCard.HealthPlus;
-                GameSettings.mana = GameSettings.mana + currentCard.ManaPlus;
+                if(!(Random.Range(0,100) < currentCard.Chance))
+                {
+                    Debug.Log("Не фартануло");
+                    GameSettings.swipeRight = GameSettings.swipeLeft = false;
+                    return;
+                }
+                GameSettings.health = GameSettings.health + currentCard.ChangeStats[0];
+                GameSettings.mana = GameSettings.mana + currentCard.ChangeStats[1];
                 CheckOverflowBar();
 
                 uiManager.ChangeHealthBar();
@@ -54,8 +60,8 @@ namespace Core
             }
             else if (GameSettings.swipeLeft)
             {
-                GameSettings.health = GameSettings.health + currentCard.HealthMinus;
-                GameSettings.mana = GameSettings.mana + currentCard.ManaMinus;
+                GameSettings.health = GameSettings.health + currentCard.ChangeStats[2];
+                GameSettings.mana = GameSettings.mana + currentCard.ChangeStats[3];
                 CheckOverflowBar();
 
                 uiManager.ChangeHealthBar();
@@ -68,6 +74,7 @@ namespace Core
 
                 GameSettings.swipeRight = GameSettings.swipeLeft = false;
             }
+
             if (GameSettings.canSpawnCard && indexCard < numberOfCards)
             {
                 cardsManager.SpawnCard(indexCard);
