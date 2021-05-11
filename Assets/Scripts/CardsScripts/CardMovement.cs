@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 using Core;
 
@@ -34,7 +35,7 @@ namespace Card
         {
             transform.eulerAngles = new Vector3(0, 0, transform.position.x * rotationCoef);
             //если карту отпустили раньше времени, нужно вернуть её на изначальное место
-            if(dropCard)
+            if (dropCard)
             {
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, 0, 0), Time.deltaTime * speedComebackCam);
             }
@@ -62,10 +63,10 @@ namespace Card
         //Когда перетаскиваем карту
         public void OnDrag(PointerEventData eventData)
         {
-            Vector3 newPos = cam.ScreenToWorldPoint(eventData.position);
-            newPos.z = 0f;
-            newPos.y = transform.position.y;
-            transform.position = newPos + offset;
+                Vector3 newPos = cam.ScreenToWorldPoint(eventData.position);
+                newPos.z = 0f;
+                newPos.y = transform.position.y;
+                transform.position = newPos + offset;
         }
 
         //Когда подняли карту

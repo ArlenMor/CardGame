@@ -44,6 +44,10 @@ namespace GameUI
         {
             if (Health.fillAmount == GameSettings.health && Mana.fillAmount == GameSettings.mana)
                 updateBar = false;
+            else
+            {
+                updateBar = true;
+            }
         }
     }
 

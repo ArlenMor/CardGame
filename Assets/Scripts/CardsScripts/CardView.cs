@@ -17,6 +17,9 @@ namespace Card
         private GameObject instCard;
         private Animator animCard;
 
+        public GameObject prefEnemy;
+        private GameObject instEnemy;
+
         public GameObject prefCardCover;
         private GameObject instCardCover;
         private Animator animCardCover;
@@ -41,19 +44,19 @@ namespace Card
             instCard = Instantiate(prefCard, new Vector3(0, 0, 0), Quaternion.Euler(0, 90, 0), transform);
             //меняю ему имя на то, что соответствует карте
             
-            instCard.gameObject.name = card.Name;
+            instCard.gameObject.name = card.CardName;
             instCard.gameObject.transform.SetSiblingIndex(1);
 
             //вписываю туда все параметры, которые пришли из card 
             instCard.transform.Find("Name").gameObject.transform
                     .GetChild(0).gameObject
-                    .GetComponent<TextMeshProUGUI>().text = card.Name;
+                    .GetComponent<TextMeshProUGUI>().text = card.CardName;
             instCard.transform.Find("Info").gameObject
                                   .GetComponent<TextMeshProUGUI>().text = card.Info;
 
-            instCard.gameObject.GetComponent<Image>().sprite = card.Bg;
-            instCard.transform.Find("Edging").gameObject.GetComponent<Image>().sprite = card.Edging;
-            instCard.transform.Find("Image").gameObject.GetComponent<Image>().sprite = card.Image;
+            instCard.gameObject.GetComponent<Image>().sprite = card.BgCard;
+            instCard.transform.Find("Edging").gameObject.GetComponent<Image>().sprite = card.EdgingName;
+            instCard.transform.Find("Image").gameObject.GetComponent<Image>().sprite = card.ImageName;
             instCard.transform.Find("Name").gameObject.GetComponent<Image>().sprite = card.BgName;
 
             animCard = instCard.GetComponent<Animator>();
@@ -76,6 +79,42 @@ namespace Card
             Destroy(instCardCover);
             yield return new WaitForSeconds(animCard.runtimeAnimatorController.animationClips.Length - 0.65f);
             Destroy(animCard);
+        }
+
+        public void DrawEnemy(Enemy enemy)
+        {
+            CreateEnemy(enemy);
+        }
+
+        private void CreateEnemy(Enemy enemy)
+        {
+            //создаю объект
+            instEnemy = Instantiate(prefEnemy, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0), transform);
+            //меняю ему имя на то, что соответствует карте
+
+            instEnemy.gameObject.name = enemy.CardName;
+            instEnemy.gameObject.transform.SetSiblingIndex(1);
+
+            //вписываю туда все параметры, которые пришли из card 
+            instEnemy.transform.Find("Name").gameObject.transform
+                    .GetChild(0).gameObject
+                    .GetComponent<TextMeshProUGUI>().text = enemy.CardName;
+
+            instEnemy.gameObject.GetComponent<Image>().sprite = enemy.BgCard;
+            instEnemy.transform.Find("Edging").gameObject.GetComponent<Image>().sprite = enemy.EdgingName;
+            instEnemy.transform.Find("Image").gameObject.GetComponent<Image>().sprite = enemy.ImageName;
+            instEnemy.transform.Find("Name").gameObject.GetComponent<Image>().sprite = enemy.BgName;
+            instEnemy.transform.Find("Armor").gameObject.GetComponent<Image>().sprite = enemy.ArmorName;
+            instEnemy.transform.Find("Damage").gameObject.GetComponent<Image>().sprite = enemy.DamageName;
+
+            instEnemy.transform.Find("Armor").gameObject.transform
+                .GetChild(0).gameObject
+                .GetComponent<TextMeshProUGUI>().text = enemy.EnemyStats[1] + "";
+
+            instEnemy.transform.Find("Damage").gameObject.transform
+                               .GetChild(0).gameObject
+                               .GetComponent<TextMeshProUGUI>().text = enemy.EnemyStats[0] + "";
+
         }
     }
 }

@@ -19,6 +19,14 @@ namespace Core
         //глобальные характеристики персонажа
         public static float health;
         public static float mana;
+        public static float damage;
+
+        //Глобальные переменные для врагов
+        public static float currentEnemiesDamage;
+        public static float CurrentEnemiesArmor;
+        public static float CurrentEnemiesHealth;
+        public static float CurrentEnemiesChanceToEscape;
+        public static float CurrentEnemiesTimeBetweenHits;
     }
 
 }
