@@ -1,0 +1,22 @@
+{
+	"AllEnemies" : [
+		{
+			"ID" : 0,
+			"CardName" : "Скелет-лучник",
+			"PartOfDeck" : 0,
+			"Stats" : [10, 1.5, 100, 3, 6],
+			"Drop" : [2],
+			"ChanceToDrop" : [50],
+			"Sprites" : ["BG_red", "Edging_wood", "CompositeBow", "BgName_wood_1", "CopperSqr", "CopperCircle"]
+		},
+		{
+			"ID" : 1,
+			"CardName" : "Скелет-воин",
+			"PartOfDeck" : 0,
+			"Stats" : [10, 1.5, 100, 3, 6],
+			"Drop" : [2],
+			"ChanceToDrop" : [50],
+			"Sprites" : ["BG_red", "Edging_wood", "CompositeBow", "BgName_wood_1", "CopperSqr", "CopperCircle"]
+		}
+	]
+}

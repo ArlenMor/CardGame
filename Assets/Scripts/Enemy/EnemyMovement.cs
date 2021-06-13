@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 using Card;
 using Core;
+using GameUI;
 
 public class EnemyMovement : CardMovement
 {
@@ -15,6 +17,17 @@ public class EnemyMovement : CardMovement
     private float chanceToEscape;
     private float timeBetweenHits;
 
+    private Animator anim;
+
+    private Camera enemyCam;
+    [SerializeField] private ParticleSystem _particleDamage;
+    private ParticleSystem instParticle;
+
+    [SerializeField]
+    private TextMeshProUGUI missText;
+
+    public BarShake shake;
+
 
     private float proportionalFactor;
     private float timeStart;
@@ -22,12 +35,17 @@ public class EnemyMovement : CardMovement
 
     private void Start()
     {
+
+        shake = GameObject.Find("UIIcons").gameObject.GetComponent<BarShake>();
+
+        anim = GetComponent<Animator>();
         health = GameSettings.CurrentEnemiesHealth;
         damage = GameSettings.currentEnemiesDamage;
         armor = GameSettings.CurrentEnemiesArmor;
         chanceToEscape = GameSettings.CurrentEnemiesChanceToEscape;
         timeBetweenHits = GameSettings.CurrentEnemiesTimeBetweenHits;
 
+        enemyCam = Camera.main;
         timeImage = transform.Find("Time").gameObject.GetComponent<Image>();
         proportionalFactor = timeImage.fillAmount / timeBetweenHits;
     }
@@ -39,23 +57,52 @@ public class EnemyMovement : CardMovement
         timeImage.fillAmount = timeBetweenHits * proportionalFactor;
         if (timeBetweenHits <=  0)
         {
+            shake.Shake(0.1f, 0.2f);
             GameSettings.health -= damage/100;
             timeBetweenHits = GameSettings.CurrentEnemiesTimeBetweenHits;
         }
     }
 
+
     public void Hit()
     {
         if(armor > GameSettings.damage)
         {
-            GameSettings.mana -= 0.01f;
+            GameSettings.energy -= 0.01f;
+            
             return;
         }
-        health -= GameSettings.damage;
-        GameSettings.mana -= 0.01f;
+        if(chanceToEscape < Random.Range(0, 100))
+        {
+            anim.SetTrigger("hitCard");
+            instParticle = Instantiate(_particleDamage, enemyCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 5)), Quaternion.identity, transform);
+            instParticle.transform.SetSiblingIndex(0);
+            health -= GameSettings.damage;
+            GameSettings.energy -= 0.002f;
+        }
+        else
+        {
+            bool rand = Random.Range(0, 100) > Random.Range(0, 100);
+            if (rand)
+                anim.SetTrigger("missCard_1");
+            else
+                anim.SetTrigger("missCard_2");
+            StartCoroutine(CreateMissText());
+        }
 
         CheckDeath();
     }
+
+    IEnumerator CreateMissText()
+    {
+        TextMeshProUGUI text = Instantiate(missText, enemyCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 5)), Quaternion.identity, transform);
+        Animator textAnim = text.GetComponent<Animator>();
+        textAnim.SetTrigger("miss");
+        yield return new WaitForSeconds(textAnim.runtimeAnimatorController.animationClips.Length);
+        Destroy(text);
+    }
+
+    
 
     private void CheckDeath()
     {

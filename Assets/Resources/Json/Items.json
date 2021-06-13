@@ -1,0 +1,21 @@
+{
+	"AllItems" : [
+		{
+			"ID" : 0,
+			"CardName" : "Зелье Здоровья",
+			"InfoCard" : "Восполняет 10 здоровья",
+			"PartOfDeck" : 0,
+			"NeedToTake" : [],
+			"ChangeStats" : [10, 0],
+			"Chance" : 100,
+			"Effect" : [],
+			"ChanceEffect" : [],
+			"Event" : [],
+			"ChanceEvent" : [],
+			"Enemy" : [],
+			"ChanceEnemy" : [],
+			"value" : 3,
+			"Sprites" : ["BG_green", "Edging_wood", "RedPotion", "BgName_wood_1"]
+		}
+	]
+}

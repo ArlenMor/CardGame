@@ -40,6 +40,7 @@ namespace Card
 
         private void CreateCard(Card card)
         {
+            GameSettings.info += "\nПодумай хорошенько...";
             //создаю объект
             instCard = Instantiate(prefCard, new Vector3(0, 0, 0), Quaternion.Euler(0, 90, 0), transform);
             //меняю ему имя на то, что соответствует карте
@@ -81,13 +82,24 @@ namespace Card
             Destroy(animCard);
         }
 
+        IEnumerator DeleySpawnEnemy(Enemy enemy)
+        {
+            CreateCardCover();
+            yield return new WaitForSeconds(animCardCover.runtimeAnimatorController.animationClips.Length - 0.25f);
+            CreateEnemy(enemy);
+            Destroy(instCardCover);
+            yield return new WaitForSeconds(1f);
+            Destroy(animCard);
+        }
+
         public void DrawEnemy(Enemy enemy)
         {
-            CreateEnemy(enemy);
+            StartCoroutine(DeleySpawnEnemy(enemy));
         }
 
         private void CreateEnemy(Enemy enemy)
         {
+            GameSettings.info += "\nВраг! Бей его!!!";
             //создаю объект
             instEnemy = Instantiate(prefEnemy, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0), transform);
             //меняю ему имя на то, что соответствует карте

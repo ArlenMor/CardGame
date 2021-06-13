@@ -1,0 +1,14 @@
+{
+	"AllEquipments" : [
+		{
+			"ID" : 0,
+			"EquipmentType" : "Weapon",
+			"CardName" : "Бедренная кость",
+			"InfoCard" : "Взял на время у скелета",
+			"PartOfDeck" : 0,
+			"EquipmentStats" : [1, 20],
+			"value" : 0,
+			"Sprites" : ["BG_green", "Edging_wood", "RedPotion", "BgName_wood_1", "CopperSqr", "CopperCircle"]
+		}
+	]
+}

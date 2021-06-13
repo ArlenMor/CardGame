@@ -1,0 +1,13 @@
+{
+	"AllEffects" : [
+		{
+			"ID" : 0,
+			"EffectName" : "Жажда",
+			"EffectInfo" : "-1 энергия при открытии карты на следующие 10 ходов",
+			"ChangeStats" : [0, -1, 0, 0],
+			"Conditions" : [0, 1],
+			"EffectDuration" : 10,
+			"SpawnEnemies" : []
+		}
+	]
+}

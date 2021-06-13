@@ -1,0 +1,22 @@
+{
+	"AllEvents" : [
+		{
+			"ID" : 0,
+			"CardName" : "Отдохнуть",
+			"InfoCard" : "Восполняет 10 Энергии",
+			"PartOfDeck" : 0,
+			"NeedToTake" : [],
+			"ChangeStats" : [10, 0, 0, 0],
+			"CanSkip" : true, 
+			"EffectRight" : [],
+			"ChanceEffectRight" : [],
+			"DropRight" : [],
+			"ChanceDropRight" : [],
+			"EffectLeft" : [],
+			"ChanceEffectLeft" : [],
+			"DropLeft" : [],
+			"ChanceDropLeft" : [],
+			"Sprites" : ["BG_green", "Edging_wood", "BluePotion", "BgName_wood_1"]
+		}
+	]
+}

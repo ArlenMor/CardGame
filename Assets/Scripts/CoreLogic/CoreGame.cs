@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 using Card;
 using GameUI;
@@ -18,13 +19,10 @@ namespace Core
         private GameObject endGamePanel;
 
         [SerializeField]
+        private TextMeshProUGUI textInfo;
+
+        [SerializeField]
         private CardsManager cardsManager;
-
-        [SerializeField]
-        private UIManager uiManager;
-
-        [SerializeField]
-        private InventoryManager inventoryManager;
 
         private int numberOfCards;
         private int indexCard = 0;
@@ -34,43 +32,38 @@ namespace Core
 
 
         private Card.Card currentCard;
-        private Enemy currenEnemy;
+        private Card.Enemy currenEnemy;
 
         private void Start()
         {
             cam = Camera.allCameras[0];
             GameSettings.canSpawnCard = true;
             GameSettings.health = 1;
-            GameSettings.mana = 1;
-            GameSettings.damage = 6;
+            GameSettings.energy = 1;
+            GameSettings.damage = 3;
             numberOfCards = GameSettings.numberCards;
         }
         void Update()
         {
+            textInfo.text = GameSettings.info;
             //если свайп вправо
             if (GameSettings.swipeRight)
             {
-                if(!inventoryManager.CheckCardInInventory(currentCard))
-                {
-                    Debug.Log("{GameLog} -> CoreGame -> Update -> нет нужной карты, чтобы использовать");
-                    GameSettings.swipeRight = GameSettings.swipeLeft = false;
-                    return;
-                }
+                
                 //Проверяем шанс
                 if(!(Random.Range(0,100) < currentCard.Chance))
                 {
+                    GameSettings.info += "\nНе повезло. Эффект карты не получен";
                     Debug.Log("Не фартануло");
                     GameSettings.swipeRight = GameSettings.swipeLeft = false;
                     return;
                 }
                 //меняем значения здоровья и маны
                 GameSettings.health = GameSettings.health + currentCard.ChangeStats[0];
-                GameSettings.mana = GameSettings.mana + currentCard.ChangeStats[1];
+                GameSettings.energy = GameSettings.energy + currentCard.ChangeStats[1];
                 //Проверяем, чтобы значение не вышли за пределы
                 CheckOverflowBar();
 
-                //Изменяем bar
-                uiManager.ChangeHealthBar();
                 //Проверка на смерть
                 if (CheckDie())
                 {
@@ -81,20 +74,16 @@ namespace Core
                 GameSettings.swipeRight = GameSettings.swipeLeft = false;
                 //Если нужно отправить карту в инвентарь
                 
-                if(currentCard.CanSafe)
-                    inventoryManager.AddCardInInventory(currentCard);
+               
             }
             //если свайп влево
             else if (GameSettings.swipeLeft)
             {
                 //Меняем значение здоровья и маны
                 GameSettings.health = GameSettings.health + currentCard.ChangeStats[2];
-                GameSettings.mana = GameSettings.mana + currentCard.ChangeStats[3];
+                GameSettings.energy = GameSettings.energy + currentCard.ChangeStats[3];
                 //Проверяем переполнение
                 CheckOverflowBar();
-
-                //Меняем bar
-                uiManager.ChangeHealthBar();
 
                 //Проверка на смерть
                 if (CheckDie())
@@ -112,7 +101,6 @@ namespace Core
 
                 //FIX IT!!!
                 bool chance = 50 > Random.Range(0, 100);
-                Debug.Log("chanse is " + chance);
                 if (chance)
                 {
                     if(indexForCards < cardsManager.GetCardsCount())
@@ -166,8 +154,8 @@ namespace Core
         {
             if (GameSettings.health > 1)
                 GameSettings.health = 1;
-            if (GameSettings.mana > 1)
-                GameSettings.mana = 1;
+            if (GameSettings.energy > 1)
+                GameSettings.energy = 1;
         }
 
         IEnumerator ShowDieDialoge()

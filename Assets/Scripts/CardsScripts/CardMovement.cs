@@ -50,8 +50,6 @@ namespace Card
                 transform.Translate(Vector3.left * speedComebackCam * 1.2f * Time.deltaTime);
                 Invoke("DestroyObject", 0.5f);
             }
-
-            
         }
 
         private void DestroyObject()
